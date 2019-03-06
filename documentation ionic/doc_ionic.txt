@@ -1,0 +1,26 @@
+se positionner dans le répertoire où vous allez mettre votre projet (ex Documents)
+
+ouvrir votre git bash
+
+ --installation ionic cordova--
+npm install -g ionic -- le -g permet de l'installer globalement
+npm install -g cordova
+
+ --création projet ionic--
+--différent option s'ouvre à vous:
+https://ionicframework.com/docs/cli/commands/start
+
+ionic start myApp
+ionic start myApp blank
+ionic start myApp tabs --cordova
+ionic start myApp tabs --capacitor
+ionic start myApp super --type=angular
+ionic start cordovaApp tabs --cordova
+
+ --lancement du projet --
+cd myApp
+ionic serve
+
+-- le projet se lancera sur votre navigateur avec le port 8100
+
+-- si le projet ne se lance pas c'est parce qu'il faut lancer votre server WAMP pour activer le "localhost"
