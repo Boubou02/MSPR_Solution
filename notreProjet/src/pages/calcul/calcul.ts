@@ -23,7 +23,14 @@ export class CalculPage {
   AchatBrut : number = 0.0;
 
 
+
+  donnee = {remise:"",achatnet:"",ventenet:"",coef:"",taux:"",achatbrut:""};
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+
+    
   }
 
   ionViewDidLoad() {
@@ -31,6 +38,33 @@ export class CalculPage {
   }
 
   compte(){
+
+
+    if (isNaN(parseInt(this.donnee.remise.valueOf()))) this.Remise = 0;
+    else this.Remise = parseInt(this.donnee.remise.valueOf());
+    if (isNaN(parseInt(this.donnee.achatnet.valueOf()))) this.AchatNet = 0;
+    else this.AchatNet = parseInt(this.donnee.achatnet.valueOf());
+    if (isNaN(parseInt(this.donnee.ventenet.valueOf()))) this.VenteNet = 0;
+    else this.VenteNet = parseInt(this.donnee.ventenet.valueOf());
+    if (isNaN(parseInt(this.donnee.coef.valueOf()))) this.Coef = 0;
+    else this.Coef = parseInt(this.donnee.coef.valueOf());
+    if (isNaN(parseInt(this.donnee.taux.valueOf()))) this.Taux = 0;
+    else this.Taux = parseInt(this.donnee.taux.valueOf());
+    if (isNaN(parseInt(this.donnee.achatbrut.valueOf()))) this.AchatBrut = 0;
+    else this.AchatBrut = parseInt(this.donnee.achatbrut.valueOf());
+
+    /*if (parseInt(this.donnee.remise.valueOf()) == null) this.Remise = 0;
+    else this.Remise = parseInt(this.donnee.remise.valueOf());
+    if (parseInt(this.donnee.achatnet.valueOf()) == null) this.AchatNet = 0;
+    else this.AchatNet = parseInt(this.donnee.achatnet.valueOf());
+    if (parseInt(this.donnee.ventenet.valueOf()) == null) this.VenteNet = 0;
+    else this.VenteNet = parseInt(this.donnee.ventenet.valueOf());
+    if (parseInt(this.donnee.coef.valueOf()) == null) this.Coef = 0;
+    else this.Coef = parseInt(this.donnee.coef.valueOf());
+    if (parseInt(this.donnee.taux.valueOf()) == null) this.Taux = 0;
+    else this.Taux = parseInt(this.donnee.taux.valueOf());
+    if (parseInt(this.donnee.achatbrut.valueOf()) == null) this.AchatBrut = 0;
+    else this.AchatBrut = parseInt(this.donnee.achatbrut.valueOf());*/
  
     let tRemise : number = 0.0;
     let tAchatNet : number = 0.0;
@@ -41,7 +75,8 @@ export class CalculPage {
 
     let tst : boolean = true;
     
-    while(tst)
+    //while(tst)
+    for(let i=0 ; i<=3;i++)
      {
       tVenteNet = this.VenteNet;
       tAchatNet = this.AchatNet;
@@ -65,7 +100,7 @@ export class CalculPage {
       
       if (tRemise>0 && tTaux>0) tAchatBrut = this.remplace(tAchatBrut,((tRemise*100)/tTaux));
     
-      if (tVenteNet == this.VenteNet && tAchatNet == this.AchatNet && tCoef == this.Coef && tTaux == this.Taux && tAchatBrut == this.AchatBrut && tRemise == this.Remise) tst = false;
+      //if (tVenteNet == this.VenteNet && tAchatNet == this.AchatNet && tCoef == this.Coef && tTaux == this.Taux && tAchatBrut == this.AchatBrut && tRemise == this.Remise) tst = false;
      }
      
      if (tVenteNet == -1 || tAchatNet == -1 || tCoef == -1 || tTaux == -1 || tAchatBrut == -1 || tRemise == -1)

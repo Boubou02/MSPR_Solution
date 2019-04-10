@@ -15,4 +15,57 @@
 
 <ion-content padding>
 
+    
+
+        <form>
+          <ion-item>
+            <ion-label>Prix d'achat brut</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.achatbrut" name="achatbrut" (keyup)=compte() value="0"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Montant de remise</ion-label>
+              <ion-input type="number" [(ngModel)]="donnee.remise" name="remise" (keyup)=compte() value="0"></ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-label>Taux de remise</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.taux" name="tauxremise" (keyup)=compte() value="0"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Prix d'achat net</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.achatnet" name="achatnet" (keyup)=compte() value="0"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Prix de vente net</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.ventenet" name="ventenet" (keyup)=compte() value="0"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Coefficient multiplicateur</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.coef" name="coef" (keyup)=compte() value="0"></ion-input>
+          </ion-item>
+        </form>
+        <br><br>
+        <table cellspacing="4px" cellpadding="4px;" align="center">
+          <tr>
+            <td>Taux de remise : </td>
+            <td>{{Taux}}</td>
+            <td>Prix d'achat net : </td>
+            <td>{{AchatNet}}</td>
+          </tr>
+          <tr>
+            <td>Prix de vente net : </td>
+            <td>{{VenteNet}}</td>
+            <td>Coefficient multiplicateur : </td>
+            <td>{{Coef}}</td>
+          </tr>
+          <tr>
+              <td>Prix de achat brut : </td>
+              <td>{{AchatBrut}}</td>
+              <td>montat remise: </td>
+              <td>{{Remise}}</td>
+            </tr>
+        </table>
+        
+        
+        
+
 </ion-content>
