@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calcule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<form>
+  <ion-item>
+    <ion-label>Prix d'achat brut</ion-label>
+    <ion-input type="text" [(ngModel)]="donnee.prixbrut" name="prixbrut" (keyup)=compte()></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Taux de remise</ion-label>
+    <ion-input [(ngModel)]="donnee.tauxremise" name="tauxremise" (keyup)=compte() value="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prix d'achat net</ion-label>
+    <ion-input [(ngModel)]="donnee.achatnet" name="achatnet" (keyup)=compte() value="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prix de vente net</ion-label>
+    <ion-input [(ngModel)]="donnee.ventenet" name="ventenet" (keyup)=compte() value="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Coefficient multiplicateur</ion-label>
+    <ion-input [(ngModel)]="donnee.coeff" name="coeff" (keyup)=compte() value="0"></ion-input>
+  </ion-item>
+</form>
+<br><br>
+<table cellspacing="4px" cellpadding="4px;" align="center">
+  <tr>
+    <td>Taux de remise : </td>
+    <td>{{remise}}</td>
+    <td>Prix d'achat net : </td>
+    <td>{{achat}}</td>
+  </tr>
+  <tr>
+    <td>Prix de vente net : </td>
+    <td>{{vente}}</td>
+    <td>Coefficient multiplicateur : </td>
+    <td>{{co}}</td>
+  </tr>
+</table>
+
+
+</ion-content>

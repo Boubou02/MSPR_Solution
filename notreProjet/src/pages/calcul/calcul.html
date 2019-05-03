@@ -19,27 +19,27 @@
 
         <form>
           <ion-item>
-            <ion-label>Prix d'achat brut</ion-label>
-            <ion-input type="number" [(ngModel)]="donnee.achatbrut" name="achatbrut" (keyup)=compte() value="0"></ion-input>
+            <ion-label id={{csAchatBrut}}>Prix d'achat brut</ion-label>
+            <ion-input type="number" [(ngModel)]="donnee.achatbrut" name="achatbrut" (keyup)=compte() value="0" color="yellow"></ion-input>
           </ion-item>
           <ion-item>
-              <ion-label>Montant de remise</ion-label>
+              <ion-label id={{csRemise}}>Montant de remise</ion-label>
               <ion-input type="number" [(ngModel)]="donnee.remise" name="remise" (keyup)=compte() value="0"></ion-input>
             </ion-item>
           <ion-item>
-            <ion-label>Taux de remise</ion-label>
+            <ion-label id={{csTaux}}>Taux de remise</ion-label>
             <ion-input type="number" [(ngModel)]="donnee.taux" name="tauxremise" (keyup)=compte() value="0"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label>Prix d'achat net</ion-label>
+            <ion-label id={{csAchatNet}}>Prix d'achat net</ion-label>
             <ion-input type="number" [(ngModel)]="donnee.achatnet" name="achatnet" (keyup)=compte() value="0"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label>Prix de vente net</ion-label>
+            <ion-label id={{csVenteNet}}>Prix de vente net</ion-label>
             <ion-input type="number" [(ngModel)]="donnee.ventenet" name="ventenet" (keyup)=compte() value="0"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label>Coefficient multiplicateur</ion-label>
+            <ion-label id={{csCoef}}>Coefficient multiplicateur</ion-label>
             <ion-input type="number" [(ngModel)]="donnee.coef" name="coef" (keyup)=compte() value="0"></ion-input>
           </ion-item>
         </form>
@@ -58,12 +58,25 @@
             <td>{{Coef}}</td>
           </tr>
           <tr>
-              <td>Prix de achat brut : </td>
-              <td>{{AchatBrut}}</td>
+              <td> <button ion-button (click)=achatBrut()> Prix de achat brut :  {{AchatBrut}}</button> </td>
+              <!--<td>{{AchatBrut}}</td>-->
               <td>montat remise: </td>
               <td>{{Remise}}</td>
             </tr>
         </table>
+
+        <form>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6" size-lg offset="3">
+                ion-col [size="6"] [size-lg] [offset="3"]
+              </ion-col>
+              <ion-col size="3" size-lg>
+                ion-col [size="3"] [size-lg]
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
         
         
         

@@ -22,6 +22,13 @@ export class CalculPage {
   Taux : number = 0.0;
   AchatBrut : number = 0.0;
 
+  csAchatNet : String = "neutre";
+  csRemise : String = "neutre";
+  csVenteNet : String = "neutre";
+  csCoef : String = "neutre";
+  csTaux : String = "neutre";
+  csAchatBrut : String = "neutre";
+
 
 
   donnee = {remise:"",achatnet:"",ventenet:"",coef:"",taux:"",achatbrut:""};
@@ -126,6 +133,18 @@ export class CalculPage {
       else if (ancien > 0 && nouveau >= 0 && ancien != nouveau) ancien=-1;
 
       return ancien;
+    }
+
+    
+    achatBrut(){
+
+      this.csAchatBrut = "neutre";
+      this.csCoef = "neutre";
+      this.csVenteNet = "neutre";
+      this.csRemise = "neutre";
+
+      this.csAchatNet = "evidence";
+      this.csTaux = "evidence";
     }
 
 }
