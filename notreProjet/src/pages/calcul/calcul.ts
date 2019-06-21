@@ -66,6 +66,19 @@ export class CalculPage {
 
     if (isNaN(parseInt(this.donnee.achatbrut.valueOf()))) this.AchatBrut = 0;
     else this.AchatBrut = parseInt(this.donnee.achatbrut.valueOf());
+
+    /*if (parseInt(this.donnee.remise.valueOf()) == null) this.Remise = 0;
+    else this.Remise = parseInt(this.donnee.remise.valueOf());
+    if (parseInt(this.donnee.achatnet.valueOf()) == null) this.AchatNet = 0;
+    else this.AchatNet = parseInt(this.donnee.achatnet.valueOf());
+    if (parseInt(this.donnee.ventenet.valueOf()) == null) this.VenteNet = 0;
+    else this.VenteNet = parseInt(this.donnee.ventenet.valueOf());
+    if (parseInt(this.donnee.coef.valueOf()) == null) this.Coef = 0;
+    else this.Coef = parseInt(this.donnee.coef.valueOf());
+    if (parseInt(this.donnee.taux.valueOf()) == null) this.Taux = 0;
+    else this.Taux = parseInt(this.donnee.taux.valueOf());
+    if (parseInt(this.donnee.achatbrut.valueOf()) == null) this.AchatBrut = 0;
+    else this.AchatBrut = parseInt(this.donnee.achatbrut.valueOf());*/
  
     let tRemise : number = 0.0;
     let tAchatNet : number = 0.0;
