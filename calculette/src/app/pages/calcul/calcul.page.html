@@ -1,0 +1,93 @@
+<!--
+  Generated template for the CalculPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>calcul</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+   <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label>Prix d'achat brut</ion-label>
+          <ion-input type="text" [(ngModel)]="donnee.achatbrut" name="achatbrut" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Montant de remise</ion-label>
+          <ion-input [(ngModel)]="donnee.remise" name="remise" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Taux de remise</ion-label>
+          <ion-input [(ngModel)]="donnee.taux" name="tauxremise" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label>Prix d'achat net</ion-label>
+          <ion-input [(ngModel)]="donnee.achatnet" name="achatnet" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Prix de vente net</ion-label>
+          <ion-input [(ngModel)]="donnee.ventenet" name="ventenet" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Coefficient multiplicateur</ion-label>
+          <ion-input [(ngModel)]="donnee.coef" name="coef" (keyup)=compte() value="0"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  
+  <table cellspacing="4px" cellpadding="4px;" align="center">
+    <tr>
+      <td>Taux de remise : </td>
+      <td>{{Taux}}</td>
+      <td>Prix d'achat net : </td>
+      <td>{{AchatNet}}</td>
+    </tr>
+    <tr>
+      <td>Prix de vente net : </td>
+      <td>{{VenteNet}}</td>
+      <td>Coefficient multiplicateur : </td>
+      <td>{{Coef}}</td>
+    </tr>
+    <tr>
+      <td>Prix de achat brut : </td>
+      <td>{{AchatBrut}}</td>
+      <td>montat remise: </td>
+      <td>{{Remise}}</td>
+    </tr>
+  </table>
+
+            <ion-label id={{csAchatBrut}}>Prix d'achat brut</ion-label>
+              <ion-label id={{csRemise}}>Montant de remise</ion-label>
+            <ion-label id={{csTaux}}>Taux de remise</ion-label>
+            <ion-label id={{csAchatNet}}>Prix d'achat net</ion-label>
+            <ion-label id={{csVenteNet}}>Prix de vente net</ion-label>
+            <ion-label id={{csCoef}}>Coefficient multiplicateur</ion-label>
+
+ 
+
+</ion-content>
