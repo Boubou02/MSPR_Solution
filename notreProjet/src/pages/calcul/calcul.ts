@@ -368,4 +368,14 @@ result dois etre -1
 ******************************************************************************************************************
 result = this.calcRemise(20, 0, 0);//test pour entré incomplete
 result dois etre 0
-*************************************************************************************************************** */
+**************************************** Remplace **************************************************************
+result = this.remplace()
+ */
+remplace(ancien, nouveau)
+    {
+      if(ancien == 0 && nouveau >= 0) ancien = nouveau;
+
+      else if (ancien > 0 && nouveau > 0 && ancien != nouveau) ancien=-1;
+
+      return ancien;
+    }
